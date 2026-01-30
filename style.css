@@ -110,3 +110,78 @@ body {
     .glitch-name { font-size: 3rem; }
     .hero-visual { display: none; }
 }
+
+/* --- HERO VISUAL & PHOTO SECTION --- */
+
+.tech-circle {
+    width: 320px; 
+    height: 320px; 
+    border: 2px dashed rgba(0, 229, 255, 0.3); /* Dotted outer ring */
+    border-radius: 50%; 
+    position: relative; 
+    margin: auto;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    /* We spin the outer dashed ring for a high-tech effect */
+    animation: spin 10s linear infinite; 
+}
+
+.inner-scanner {
+    width: 85%; 
+    height: 85%; 
+    border: 3px solid var(--primary); 
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden; /* Crucial: This "sticks" the photo into the circle */
+    background: var(--bg-dark);
+    /* Counter-rotate so the photo stays level while the outer ring spins */
+    animation: spin-reverse 10s linear infinite;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* Ensures no stretching */
+    object-position: center;
+    display: block;
+    filter: brightness(1.1) contrast(1.05); /* Optional: makes the photo pop */
+}
+
+/*.scan-line {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--primary);
+    box-shadow: 0 0 15px var(--primary);
+    z-index: 2;
+    animation: scanMove 3s ease-in-out infinite;
+}
+*/
+/* --- ANIMATIONS --- */
+
+@keyframes spin { 
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); } 
+}
+
+@keyframes spin-reverse { 
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); } 
+}
+
+@keyframes scanMove {
+    0%, 100% { top: 5%; opacity: 0.3; }
+    50% { top: 90%; opacity: 1; }
+}
+
+/* --- REST OF YOUR PORTFOLIO STYLES --- */
+:root {
+    --primary: #00e5ff;
+    --secondary: #ff2d75;
+    --bg-dark: #0b0e14;
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/* ... (Keep your existing navbar, glitch-name, and layout CSS here) ... */
