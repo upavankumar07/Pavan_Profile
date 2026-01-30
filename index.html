@@ -1,153 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pavan Kumar U | Automotive V&V Engineer</title>
-
-<link rel="stylesheet" href="style.css" />
-<script defer src="script.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavan Kumar U | Automotive V&V Engineer</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Particle Background -->
-<div id="particles-js"></div>
+    <div id="particles-js"></div>
 
-<!-- Sidebar -->
-<nav class="sidebar">
-  <h2 class="logo">PAVAN</h2>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <nav class="navbar">
+        <div class="logo">PAVAN</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- Main Content -->
-<main class="content">
+    <main>
+        <section id="home" class="hero container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <p class="accent-label">V&V ENGINEER</p>
+                    <h1 class="glitch-name">PAVAN<br>KUMAR U</h1>
+                    <h3>Automotive Verification & Validation Engineer</h3>
+                    <p class="hero-desc">SIL / HIL | CI Automation | IVI | Instrument Cluster <br> Python | ECU Test Tool | CAN | UDS | Virtualization</p>
+                    <div class="cta-row">
+                        <a href="Pavan_Validation.pdf" class="btn-main" target="_blank">DOWNLOAD RESUME</a>
+                        <a href="#contact" class="btn-outline">CONTACT ME</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="tech-circle">
+                        <div class="inner-scanner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section id="home" class="hero animate">
-  <h1>Pavan Kumar U</h1>
-  <h3>Automotive Verification & Validation Engineer</h3>
-  <p>SIL / HIL | CI Automation | IVI | Instrument Cluster</p>
-  <p>Python | ECU Test Tool | CAN | UDS | Virtualization</p>
-  <a href="Pavan_Validation.pdf" class="btn" target="_blank">Download Resume</a>
-</section>
+        <section id="about" class="section container reveal">
+            <div class="glass-card">
+                <h2 class="section-header">About Me</h2>
+                <p>Automotive Verification & Validation Engineer with 4+ years of experience in SIL/HIL testing, CI automation, Infotainment ECU validation, Python automation, ECU Test, CANoe, GitHub Actions, Goldfish Emulator, and RADAR reporting.</p>
+            </div>
+        </section>
 
-<section id="about" class="section animate">
-  <h2>About Me</h2>
-  <p>
-    Automotive Verification & Validation Engineer with 4+ years of experience in SIL/HIL testing,
-    CI automation, Infotainment ECU validation, Python automation, ECU Test, CANoe, GitHub Actions,
-    Goldfish Emulator, and RADAR reporting.
-  </p>
-</section>
+        <section id="skills" class="section container reveal">
+            <h2 class="section-header">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">SIL / HIL Testing</div>
+                <div class="skill-tag">CI/CD Automation</div>
+                <div class="skill-tag">Python Automation</div>
+                <div class="skill-tag">CAN / UDS</div>
+                <div class="skill-tag">ECU Test Tool</div>
+                <div class="skill-tag">Vector / dSpace</div>
+                <div class="skill-tag">GitHub Actions</div>
+                <div class="skill-tag">Goldfish Emulator</div>
+                <div class="skill-tag">Virtualization</div>
+            </div>
+        </section>
 
-<section id="skills" class="section animate">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div class="card">SIL / HIL Testing</div>
-    <div class="card">CI/CD Automation</div>
-    <div class="card">Python Automation</div>
-    <div class="card">CAN / UDS</div>
-    <div class="card">ECU Test Tool</div>
-    <div class="card">Vector / dSpace</div>
-    <div class="card">GitHub Actions</div>
-    <div class="card">Goldfish Emulator</div>
-    <div class="card">Virtualization</div>
-  </div>
-</section>
+        <section id="experience" class="section container reveal">
+            <h2 class="section-header">Experience</h2>
+            <div class="glass-card">
+                <h3 style="color: var(--primary);">KPIT Technologies — Verification & Validation Engineer</h3>
+                <p style="color: var(--secondary); margin-bottom: 10px;">Nov 2021 – Present | Bengaluru</p>
+                <ul class="exp-list">
+                    <li>SIL/HIL validation for Instrument Cluster & IVI ECUs</li>
+                    <li>CI-based automated execution using GitHub Actions</li>
+                    <li>Python automation using ENNA framework</li>
+                    <li>Goldfish Emulator-based SIL testing</li>
+                    <li>CAN / UDS ECU communication validation</li>
+                    <li>RADAR result publishing & reporting</li>
+                    <li>Regression, Smoke, Sanity, Nightly builds</li>
+                </ul>
+            </div>
+        </section>
 
-<section id="experience" class="section animate">
-  <h2>Experience</h2>
+        <section id="projects" class="section container reveal">
+            <h2 class="section-header">Projects</h2>
+            <div class="project-column">
+                
+                <div class="glass-card project-box">
+                    <span class="client-tag">CLIENT: CARIAD SE VOLKSWAGEN GROUP | JULY 2025 - PRESENT</span>
+                    <h3>CI/CD Automation IVI</h3>
+                    <p>Built and executed automated IVI test suites using GitHub Actions on the Goldfish Emulator. Developed CI workflows using an ENNA-based Python automation framework for infotainment functional and system-level testing. Integrated automated test reporting with RADAR dashboards.</p>
+                    <p class="tech-stack">PYTHON, ENNA, GOLDFISH/CUTTLEFISH, LOOKER STUDIO, GCP, FIRESTORE, GITHUB ACTIONS</p>
+                </div>
 
-  <div class="timeline">
-    <h3>KPIT Technologies — Verification & Validation Engineer</h3>
-    <span>Nov 2021 – Present | Bengaluru</span>
-    <ul>
-      <li>SIL/HIL validation for Instrument Cluster & IVI ECUs</li>
-      <li>CI-based automated execution using GitHub Actions</li>
-      <li>Python automation using ENNA framework</li>
-      <li>Goldfish Emulator-based SIL testing</li>
-      <li>CAN / UDS ECU communication validation</li>
-      <li>RADAR result publishing & reporting</li>
-      <li>Regression, Smoke, Sanity, Nightly builds</li>
-    </ul>
-  </div>
-</section>
+                <div class="glass-card project-box">
+                    <span class="client-tag">CLIENT: STELLANTIS INTERNATIONAL | MAY 2022 - JUNE 2025</span>
+                    <h3>R2PX – Vehicle Software Integration (Instrument Cluster)</h3>
+                    <p>Validated alerts and system information on Instrument Clusters. Analyzed requirement documents to design traceable test cases, implemented and executed tests using IBM RQM and ECU Test Tool. Designed and executed 500+ test cases and reported 50+ critical defects.</p>
+                    <p class="tech-stack">ECU TEST TOOL, IBM DOORS, RTC, RQM, CONFLUENCE, CAN, CAN FD, LIN, AUTOMOTIVE ETHERNET, UDS</p>
+                </div>
 
-<section id="projects" class="section animate">
-  <h2>Projects</h2>
+                <div class="glass-card project-box">
+                    <span class="client-tag">CLIENT: KPIT TECHNOLOGIES LTD | NOV 2021 - APR 2022</span>
+                    <h3>MW Development Project</h3>
+                    <p>Built and executed automated IVI test suites using GitHub Actions on the Goldfish Emulator. Managed communication protocol validation and performed Smoke, Sanity, and Nightly build testing to ensure release stability.</p>
+                    <p class="tech-stack">AUTOSAR CLASSIC</p>
+                </div>
 
-  <div class="project-grid">
+            </div>
+        </section>
 
-    <div class="project-card">
-      <h3>Client: CARIAD SE Volkswagen Group | July 2025 - Present</h3>
-      <h4>Project: CI/CD Automation IVI</h4>
-      <h4>Environment: Emulator / HIL</h4>
-      <p><strong></strong> 
-        Built and executed automated IVI test suites using GitHub Actions on the Goldfish Emulator to support scalable CI-driven validation. Developed CI workflows using an ENNA-based Python automation framework for infotainment functional and system-level testing. Ran CI pipelines across Dev and Beta environments to ensure consistent coverage and proactive defect detection. Integrated automated test reporting with RADAR dashboards to enable real-time quality monitoring and actionable insights. Automated ECU validation for HCP3 and ICC, covering communication protocols, system behavior, and infotainment use-case verification. Performed Smoke, Sanity, Nightly, and Official Build testing to ensure release stability, improve regression efficiency, and maintain continuous quality assurance in software delivery.
-      </p>
-      <p><strong>Tech:</strong> Python Enna-based-framework, Goldfish/cuttlefish Emulator-based, Looker studio, GCP, FireStore, GitHub Actions</p>
-    </div>
+        <section id="contact" class="section container reveal">
+            <div class="glass-card contact-footer">
+                <h2 class="section-header">Contact</h2>
+                <div class="contact-grid">
+                    <a href="mailto:udayagiripavankumar222@gmail.com"><i class="fas fa-envelope"></i> udayagiripavankumar222@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/pavankumar-u/" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/pavankumar-u/</a>
+                    <span><i class="fas fa-phone"></i> +91-7095980656</span>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div class="project-card">
-      <h3>Client: STELLANTIS International Pvt Ltd, Bengaluru | May 2022 - June 2025 </h3>
-      <h4>Project: R2PX – Vehicle Software Integration (Instrument Cluster)</h4>
-      <h4>Environment: HIL</h4>
-      <p><strong>Roles and Responsibilities:</strong> Validated accurate display of alerts and system information on the Instrument Cluster, ensuring compliance with Vehicle Function (VF) and system requirements. Analyzed requirement documents to design traceable and efficient test cases, implemented and executed tests using IBM RQM and ECU Test Tool, and conducted component and subsystem testing using Vector tools. Reported and tracked defects through RTC, collaborating with development teams to drive timely resolutions and improve product quality. Performed Regression, Delta Validation, and Sanity Testing to maintain system stability across releases. Designed and executed 500+ test cases, developed HIL benches, automated test case migration, and reported 50+ critical defects, improving traceability, validation efficiency, and overall software reliability</p>
-      <p><strong>Tech:</strong> ECU Test Tool, IBM DOORS, RTC, RQM, Confluence, CAN, CAN FD, LIN, Automotive Ethernet, UDS (ISO 14229)</p>
-    </div>
-    
-    <div class="project-card">
-      <h3>Client: KPIT Technologies Ltd, Bengaluru | November 2021 - April 2022 </h3>
-      <h4>Project: MW Development Project</h4>
-      <h4>Environment: AUTOSAR Classic</h4>
-      <p><strong></strong> 
-        Built and executed automated IVI test suites using GitHub Actions on the Goldfish Emulator to support scalable CI-driven validation. Developed CI workflows using an ENNA-based Python automation framework for infotainment functional and system-level testing. Ran CI pipelines across Dev and Beta environments to ensure consistent coverage and proactive defect detection. Integrated automated test reporting with RADAR dashboards to enable real-time quality monitoring and actionable insights. Automated ECU validation for HCP3 and ICC, covering communication protocols, system behavior, and infotainment use-case verification. Performed Smoke, Sanity, Nightly, and Official Build testing to ensure release stability, improve regression efficiency, and maintain continuous quality assurance in software delivery.
-      </p>
-      <p><strong>Tech:</strong> AUTOSAR Classic</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="contact" class="section animate">
-  <h2>Contact</h2>
-
-  <p>
-    📧 Email: 
-    <a href="mailto:udayagiripavankumar222@gmail.com">
-      udayagiripavankumar222@gmail.com
-    </a>
-  </p>
-
-  <p>
-    🔗 LinkedIn: 
-    <a href="https://www.linkedin.com/in/pavankumar-u/" target="_blank">
-      linkedin.com/in/pavankumar-u/
-    </a>
-  </p>
-  <p> 📞 Phone: <a href="tel:+91XXXXXXXXXX">+91-7095980656</a> </p>
-</section>
-
-
-</main>
-
-<!-- Particle Script -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 60 },
-    size: { value: 3 },
-    color: { value: "#38bdf8" },
-    line_linked: { enable: true }
-  }
-});
-</script>
-
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
