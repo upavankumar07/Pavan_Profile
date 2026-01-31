@@ -1,16 +1,15 @@
+<!-- ...existing code... -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pavan Kumar U | Automotive V&V Engineer</title>
-    
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div id="particles-js"></div>
 
     <nav class="navbar">
@@ -18,10 +17,16 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+
+            <div id="themeToggle">
+                <span id="sunIcon" style="cursor:pointer;">🌞</span>
+                <span id="moonIcon" style="cursor:pointer; display:none;">🌙</span>
+            </div>
         </ul>
     </nav>
 
@@ -40,11 +45,12 @@
                         <a href="#contact" class="btn-outline">CONTACT ME</a>
                     </div>
                 </div>
+
                 <div class="hero-visual">
                     <div class="tech-circle">
                         <div class="inner-scanner">
                             <img src="IMG_20251210_135124_056.webp" alt="Pavan" class="profile-img">
-                            ``<div class="scan-line"></div>``
+                            <div class="scan-line"></div>
                         </div>
                     </div>
                 </div>
@@ -54,11 +60,26 @@
         <section id="about" class="section container reveal">
             <div class="glass-card">
                 <h2 class="section-header">About Me</h2>
-                <p>Test Engineer with 4+ years of experience in automotive ECU validation, specializing in 
-                    Infotainment and Instrument Cluster systems. Proven expertise in SIL (Software-in-the-Loop) 
-                    and HIL (Hardware-in-the-Loop) testing to ensure robust requirements-based verification. 
-                    Expert in developing automated test suites using Python and ECU-TEST, integrated with 
+                <p>
+                    Test Engineer with 4+ years of experience in automotive ECU validation, specializing in
+                    Infotainment and Instrument Cluster systems. Proven expertise in SIL (Software-in-the-Loop)
+                    and HIL (Hardware-in-the-Loop) testing to ensure robust requirements-based verification.
+                    Expert in developing automated test suites using Python and ECU-TEST, integrated with
                     GitHub Actions and CI/CD pipelines to accelerate defect detection and software reliability.
+                </p>
+            </div>
+        </section>
+
+        <section id="education" class="section container reveal">
+            <div class="glass-card">
+                <h2 class="section-header">Education</h2>
+                <h3>Electronics and Communication Engineering (B.Tech)</h3>
+                <p style="color: var(--secondary); margin-bottom: 10px;">
+                    Newton's Institute Of Engineering, JNTU-Kakinada | CGPA: 7.04 <br>
+                    Completed 2020
+                </p>
+                <p>
+                    An advanced program combining deep theoretical insight with practical expertise in hardware development and electronic systems.
                 </p>
             </div>
         </section>
@@ -103,44 +124,105 @@
         <section id="projects" class="section container reveal">
             <h2 class="section-header">Projects</h2>
             <div class="project-column">
-                
                 <div class="glass-card project-box">
                     <span class="client-tag">CLIENT: CARIAD SE VOLKSWAGEN GROUP | JULY 2025 - PRESENT</span>
                     <h3>CI/CD Automation IVI</h3>
-                    <p>Built and executed automated IVI test suites using GitHub Actions on the Goldfish Emulator. Developed CI workflows using an ENNA-based Python automation framework for infotainment functional and system-level testing. Integrated automated test reporting with RADAR dashboards.</p>
+                    <p>
+                        Built and executed automated IVI test suites using GitHub Actions on the Goldfish Emulator. Developed CI workflows using an ENNA-based Python automation framework for infotainment functional and system-level testing. Integrated automated test reporting with RADAR dashboards.
+                    </p>
                     <p class="tech-stack">PYTHON, ENNA, GOLDFISH/CUTTLEFISH, LOOKER STUDIO, GCP, FIRESTORE, GITHUB ACTIONS</p>
                 </div>
 
                 <div class="glass-card project-box">
                     <span class="client-tag">CLIENT: STELLANTIS INTERNATIONAL | MAY 2022 - JUNE 2025</span>
                     <h3>R2PX – Vehicle Software Integration (Instrument Cluster)</h3>
-                    <p>Validated alerts and system information on Instrument Clusters. Analyzed requirement documents to design traceable test cases, implemented and executed tests using IBM RQM and ECU Test Tool. Designed and executed 500+ test cases and reported 50+ critical defects.</p>
+                    <p>
+                        Validated alerts and system information on Instrument Clusters. Analyzed requirement documents to design traceable test cases, implemented and executed tests using IBM RQM and ECU Test Tool. Designed and executed 500+ test cases and reported 50+ critical defects.
+                    </p>
                     <p class="tech-stack">ECU TEST TOOL, IBM DOORS, Jfrog, ADB, CONFLUENCE, CAN, AUTOMOTIVE ETHERNET, UDS</p>
                 </div>
 
                 <div class="glass-card project-box">
                     <span class="client-tag">CLIENT: KPIT TECHNOLOGIES LTD | NOV 2021 - APR 2022</span>
                     <h3>MW Development Project</h3>
-                    <p>Orchestrated the configuration and optimization of IPCOM and IPCABS modules, ensuring seamless integration with design specifications. Managed the end-to-end build process and code compilation while enforcing MISRA compliance and safety standards through rigorous static analysis. Validated system integrity via Unit and Component testing (SIL) and verified code generation tool outputs. By implementing reusable test scripts and maintaining 100% requirements traceability across the V-cycle, I significantly improved validation efficiency and overall system functionality.</p>
+                    <p>
+                        Orchestrated the configuration and optimization of IPCOM and IPCABS modules, ensuring seamless integration with design specifications. Managed the end-to-end build process and code compilation while enforcing MISRA compliance and safety standards through rigorous static analysis. Validated system integrity via Unit and Component testing (SIL) and verified code generation tool outputs. By implementing reusable test scripts and maintaining 100% requirements traceability across the V-cycle, I significantly improved validation efficiency and overall system functionality.
+                    </p>
                     <p class="tech-stack">AUTOSAR CLASSIC</p>
                 </div>
-
             </div>
         </section>
 
         <section id="contact" class="section container reveal">
-            <div class="glass-card contact-footer">
-                <h2 class="section-header">Contact</h2>
-                <div class="contact-grid">
-                    <a href="mailto:udayagiripavankumar222@gmail.com"><i class="fas fa-envelope"></i> udayagiripavankumar222@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/pavankumar-u/" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/pavankumar-u/</a>
-                    <span><i class="fas fa-phone"></i> +91-7095980656</span>
+            <h2 class="section-header">Get In Touch</h2>
+            <div class="glass-card contact-wrapper">
+                <div class="contact-grid-two-column">
+                    <!-- Left Side: Contact Info -->
+                    <div class="contact-info">
+                        <h3 class="sub-header">Let's Connect</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:udayagiripavankumar222@gmail.com">udayagiripavankumar222@gmail.com</a></li>
+                            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/pavankumar-u/" target="_blank">linkedin.com/in/pavankumar-u</a></li>
+                            <li><i class="fas fa-phone"></i> +91-7095980656</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Bengaluru, India</li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Side: Message Form -->
+                    <div class="contact-form">
+                        <h2 class="section-header small">Send a Message</h2>
+                        <p class="contact-sub">Ready to collaborate? Let’s turn ideas into reality. Drop me a message and we’ll make your next project happen.</p>
+                        <form id="contactForm" class="styled-form" novalidate>
+                            <input type="text" id="cf-name" name="name" placeholder="Your Name" required>
+                            <input type="email" id="cf-email" name="email" placeholder="Your Email" required>
+                            <textarea id="cf-message" name="message" rows="6" placeholder="Your Message" required></textarea>
+
+                            <button type="submit" class="btn-send">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Send Message</span>
+                            </button>
+
+                            <div id="cf-status" class="cf-status" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- ...existing code... -->
+        <!-- add this block where you want the visitor counter (e.g. after #projects) -->
+        <section id="visitor-counter" class="section container reveal">
+            <div class="visitor-card">
+                <div class="vc-header"><i class="fas fa-chart-line"></i> VISITOR COUNTER</div>
+
+                <div class="vc-grid">
+                    <div class="vc-item">
+                        <div class="vc-value" data-target="6554">0</div>
+                        <div class="vc-label">TOTAL VIEWS</div>
+                    </div>
+
+                    <div class="vc-item">
+                        <div class="vc-value" data-target="1060">0</div>
+                        <div class="vc-label">UNIQUE VISITORS</div>
+                    </div>
+
+                    <div class="vc-item">
+                        <div class="vc-value" data-target="926">0</div>
+                        <div class="vc-label">RETURN VISITS</div>
+                    </div>
+                </div>
+
+                <div class="vc-updated">
+                    <i class="fas fa-sync-alt"></i>
+                    <span id="vc-last-updated">—</span>
+                </div>
+            </div>
+        </section>
+<!-- ...existing code... -->
+
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
