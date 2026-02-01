@@ -62,7 +62,3 @@ Email: udayagiripavankumar222@gmail.com
 
 Thanks for visiting my portfolio repository!
 
-
-This version is **ATS‑friendly** (keywords like *responsive design, accessibility, SEO, GitHub Pages*) and recruiter‑friendly (clear structure, professional tone).  
-
-Would you like me to also create a **short LinkedIn‑style summary** from this README so you can reuse it on your LinkedIn profile or portfolio site?
