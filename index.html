@@ -1,229 +1,303 @@
-<!-- ...existing code... -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavan Kumar U | Automotive V&V Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pavan Kumar U | Automotive V&V Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <div id="particles-js"></div>
+<body class="dark-theme">
+<div id="particles-js"></div>
+<div class="bg-mesh"></div>
 
-    <nav class="navbar">
-        <div class="logo">WELCOME</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+<nav class="navbar">
+  <a href="#home" class="nav-logo">WELCOME</a>
+  <ul class="nav-links">
+    <li><a href="#home"         data-i18n="nav_home">Home</a></li>
+    <li><a href="#about"        data-i18n="nav_about">About</a></li>
+    <li><a href="#education"    data-i18n="nav_edu">Education</a></li>
+    <li><a href="#experience"   data-i18n="nav_exp">Experience</a></li>
+    <li><a href="#skills"       data-i18n="nav_skills">Skills</a></li>
+    <li><a href="#projects"     data-i18n="nav_projects">Projects</a></li>
+    <li><a href="#achievements" data-i18n="nav_ach">Achievements</a></li>
+    <li><a href="#contact"      data-i18n="nav_contact">Contact</a></li>
+  </ul>
+  <div class="nav-controls">
 
-            <div id="themeToggle">
-                <span id="sunIcon" style="cursor:pointer;">🌞</span>
-                <span id="moonIcon" style="cursor:pointer; display:none;">🌙</span>
+    <!-- Language dropdown — matches style -->
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-trigger" id="langTrigger" type="button">
+        <i class="fas fa-globe"></i>
+        <span id="langLabel">English</span>
+        <i class="fas fa-chevron-down lang-chevron" id="langChevron"></i>
+      </button>
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-opt active" id="lb-en" onclick="applyLanguage('en')">
+          <span class="lang-opt-name">English</span><span class="lang-check" id="chk-en">✓</span>
+        </button>
+        <button class="lang-opt" id="lb-de" onclick="applyLanguage('de')">
+          <span class="lang-opt-name">German</span><span class="lang-check" id="chk-de"></span>
+        </button>
+        <button class="lang-opt" id="lb-fr" onclick="applyLanguage('fr')">
+          <span class="lang-opt-name">French</span><span class="lang-check" id="chk-fr"></span>
+        </button>
+        <button class="lang-opt" id="lb-ja" onclick="applyLanguage('ja')">
+          <span class="lang-opt-name">Japanese</span><span class="lang-check" id="chk-ja"></span>
+        </button>
+        <button class="lang-opt" id="lb-ko" onclick="applyLanguage('ko')">
+          <span class="lang-opt-name">Korean</span><span class="lang-check" id="chk-ko"></span>
+        </button>
+        <button class="lang-opt" id="lb-zh" onclick="applyLanguage('zh')">
+          <span class="lang-opt-name">Chinese</span><span class="lang-check" id="chk-zh"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav-theme" id="themeToggle">
+      <span id="sunIcon">🌞</span>
+      <span id="moonIcon" style="display:none">🌙</span>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section id="home" class="hero container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow" data-i18n="hero_hello">Hello, I'm</p>
+        <h1 class="hero-name">PAVAN KUMAR U</h1>
+        <p class="hero-role" data-i18n="hero_role">Automotive Verification &amp; Validation Engineer</p>
+        <p class="hero-tagline" data-i18n="hero_tagline">Seeking to contribute technical leadership in ECU validation and test automation to a dynamic team focused on next-generation automotive technologies.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary"><i class="fas fa-envelope"></i> <span data-i18n="btn_touch">Get In Touch</span></a>
+          <a href="Pavan_Validation.pdf" class="btn-outline" target="_blank"><i class="fas fa-download"></i> <span data-i18n="btn_resume">Download Resume</span></a>
+          <a href="#about" class="btn-ghost"><i class="fas fa-chevron-down"></i> <span data-i18n="btn_learn">Learn More</span></a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="ring-outer"><div class="ring-inner"><img src="IMG_20251210_135124_056.webp" alt="Pavan Kumar U" /></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section container reveal">
+    <h2 class="section-title" data-i18n="about_title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p data-i18n="about_p1">Connected Vehicle Engineer with <strong>4+ years of experience</strong> in automotive ECU validation, specialising in Infotainment and Instrument Cluster systems across global OEMs including Volkswagen Group (CARIAD SE) and Stellantis International.</p>
+        <p data-i18n="about_p2">Proven expertise in <strong>SIL (Software-in-the-Loop)</strong> and <strong>HIL (Hardware-in-the-Loop)</strong> testing to ensure robust requirements-based verification. Expert in developing automated test suites using Python and ECU-TEST, integrated with GitHub Actions and CI/CD pipelines to accelerate defect detection and software reliability.</p>
+        <p data-i18n="about_p3">Proficient in CAN/UDS communication validation, Goldfish &amp; Cuttlefish Android Automotive emulators, and end-to-end RADAR reporting dashboards via Looker Studio.</p>
+        <div class="stats-strip">
+          <div class="stat-box"><span class="stat-num">4+</span><span class="stat-lbl" data-i18n="stat_years">Years Exp.</span></div>
+          <div class="stat-box"><span class="stat-num">3</span><span class="stat-lbl" data-i18n="stat_projects">Projects</span></div>
+          <div class="stat-box"><span class="stat-num">500+</span><span class="stat-lbl" data-i18n="stat_tests">Test Cases</span></div>
+          <div class="stat-box"><span class="stat-num">50+</span><span class="stat-lbl" data-i18n="stat_defects">Defects</span></div>
+        </div>
+      </div>
+      <div class="highlights">
+        <h3 data-i18n="comp_title">Core Competencies</h3>
+        <div class="hl-item"><div class="hl-icon"><i class="fas fa-microchip"></i></div><div class="hl-text"><strong data-i18n="comp1_title">ECU Validation</strong><span data-i18n="comp1_desc">SIL &amp; HIL testing for IVI &amp; Instrument Cluster ECUs</span></div></div>
+        <div class="hl-item"><div class="hl-icon"><i class="fas fa-robot"></i></div><div class="hl-text"><strong data-i18n="comp2_title">Test Automation</strong><span data-i18n="comp2_desc">Python · ENNA Framework · ECU-Test Tool</span></div></div>
+        <div class="hl-item"><div class="hl-icon"><i class="fas fa-code-branch"></i></div><div class="hl-text"><strong data-i18n="comp3_title">CI/CD Pipelines</strong><span data-i18n="comp3_desc">GitHub Actions · Goldfish Emulator · GCP</span></div></div>
+        <div class="hl-item"><div class="hl-icon"><i class="fas fa-network-wired"></i></div><div class="hl-text"><strong data-i18n="comp4_title">Automotive Protocols</strong><span data-i18n="comp4_desc">CAN · UDS · Automotive Ethernet · AUTOSAR</span></div></div>
+        <div class="hl-item"><div class="hl-icon"><i class="fas fa-chart-line"></i></div><div class="hl-text"><strong data-i18n="comp5_title">Reporting &amp; Traceability</strong><span data-i18n="comp5_desc">IBM DOORS · RADAR · Looker Studio · CodeBeamer</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section container reveal">
+    <h2 class="section-title" data-i18n="edu_title">Education</h2>
+    <div class="edu-card">
+      <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+      <div class="edu-body">
+        <div class="edu-degree" data-i18n="edu_degree">Electronics and Communication Engineering (B.Tech)</div>
+        <div class="edu-school">Newton's Institute Of Engineering, JNTU-Kakinada</div>
+        <div class="edu-meta" data-i18n="edu_meta">CGPA: 7.04 · Completed 2020</div>
+        <p class="edu-desc" data-i18n="edu_desc">An advanced programme combining deep theoretical insight with practical expertise in hardware development and electronic systems, with a focus on embedded and communication technologies.</p>
+      </div>
+    </div>
+
+  <section id="experience" class="section container reveal">
+    <h2 class="section-title" data-i18n="exp_title">Experience</h2>
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-left">
+          <div class="tl-co"><a href="https://www.kpit.com/" target="_blank">KPIT Technologies Ltd</a></div>
+          <div class="tl-dt" data-i18n="exp1_date">Nov 2021 – Present</div>
+        </div>
+        <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line2"></div></div>
+        <div class="tl-body">
+          <div class="tl-role" data-i18n="exp1_role">Verification &amp; Validation Engineer</div>
+          <div class="tl-loc"><i class="fas fa-map-marker-alt"></i>&nbsp; <span data-i18n="exp1_loc">Bengaluru, India</span></div>
+          <ul class="tl-ul">
+            <li data-i18n="exp1_b1">SIL/HIL validation for <strong>Instrument Cluster &amp; IVI ECUs</strong></li>
+            <li data-i18n="exp1_b2">CI-based automated execution using <strong>GitHub Actions</strong></li>
+            <li data-i18n="exp1_b3">Python automation using <strong>ENNA framework</strong></li>
+            <li data-i18n="exp1_b4">Goldfish &amp; Cuttlefish Emulator-based <strong>SIL testing</strong> for Android Automotive</li>
+            <li data-i18n="exp1_b5">CAN / UDS ECU communication validation</li>
+            <li data-i18n="exp1_b6">RADAR result publishing &amp; reporting via <strong>Looker Studio</strong></li>
+            <li data-i18n="exp1_b7">Regression, Smoke, Sanity &amp; Nightly build execution</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section container reveal">
+    <h2 class="section-title" data-i18n="skills_title">Skills &amp; Expertise</h2>
+    <p class="skills-intro" data-i18n="skills_intro">Explore my technical competencies across various domains. Click on a category to dive deeper into specific skills, proficiency levels, and experience.</p>
+    <div class="skill-tabs">
+      <button class="sk-tab active" data-panel="testing"    data-i18n="tab_testing">Testing</button>
+      <button class="sk-tab"        data-panel="automation" data-i18n="tab_automation">Automation</button>
+      <button class="sk-tab"        data-panel="protocols"  data-i18n="tab_protocols">Protocols &amp; Hardware</button>
+      <button class="sk-tab"        data-panel="tools"      data-i18n="tab_tools">Tools &amp; ALM</button>
+      <button class="sk-tab"        data-panel="cloud"      data-i18n="tab_cloud">Cloud &amp; CI/CD</button>
+    </div>
+    <div class="sk-panel active" id="panel-testing"><div class="sk-cards">
+      <div class="sk-card" data-pct="95"><div class="sk-name">SIL Testing</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_expert">Expert</div></div>
+      <div class="sk-card" data-pct="90"><div class="sk-name">HIL Testing</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_expert">Expert</div></div>
+      <div class="sk-card" data-pct="92"><div class="sk-name">Functional Testing</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_expert">Expert</div></div>
+      <div class="sk-card" data-pct="88"><div class="sk-name">Regression Testing</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="85"><div class="sk-name">Smoke / Sanity</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="80"><div class="sk-name">Static Analysis / MISRA</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+    </div></div>
+    <div class="sk-panel" id="panel-automation"><div class="sk-cards">
+      <div class="sk-card" data-pct="90"><div class="sk-name">Python Automation</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_expert">Expert</div></div>
+      <div class="sk-card" data-pct="88"><div class="sk-name">ENNA Framework</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="85"><div class="sk-name">ECU Test Tool</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="82"><div class="sk-name">Goldfish Emulator</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="78"><div class="sk-name">Cuttlefish Emulator</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_prof">Proficient</div></div>
+      <div class="sk-card" data-pct="75"><div class="sk-name">ADB (Android Debug)</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_prof">Proficient</div></div>
+    </div></div>
+    <div class="sk-panel" id="panel-protocols"><div class="sk-cards">
+      <div class="sk-card" data-pct="88"><div class="sk-name">CAN Bus</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="85"><div class="sk-name">UDS Protocol</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="80"><div class="sk-name">Automotive Ethernet</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="82"><div class="sk-name">AUTOSAR Classic</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="78"><div class="sk-name">Vector / dSPACE</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_prof">Proficient</div></div>
+      <div class="sk-card" data-pct="75"><div class="sk-name">Embedded Systems</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_prof">Proficient</div></div>
+    </div></div>
+    <div class="sk-panel" id="panel-tools"><div class="sk-cards">
+      <div class="sk-card" data-pct="90"><div class="sk-name">Git / GitHub</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_expert">Expert</div></div>
+      <div class="sk-card" data-pct="85"><div class="sk-name">IBM DOORS / RQM</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="82"><div class="sk-name">CodeBeamer</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="80"><div class="sk-name">JIRA / Confluence</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="78"><div class="sk-name">Swagger / JFrog</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_prof">Proficient</div></div>
+      <div class="sk-card" data-pct="75"><div class="sk-name">Looker Studio</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_prof">Proficient</div></div>
+    </div></div>
+    <div class="sk-panel" id="panel-cloud"><div class="sk-cards">
+      <div class="sk-card" data-pct="88"><div class="sk-name">GitHub Actions</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="80"><div class="sk-name">GCP</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+      <div class="sk-card" data-pct="72"><div class="sk-name">AWS</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_prof">Proficient</div></div>
+      <div class="sk-card" data-pct="78"><div class="sk-name">Firestore</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_prof">Proficient</div></div>
+      <div class="sk-card" data-pct="75"><div class="sk-name">Virtualization</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_prof">Proficient</div></div>
+      <div class="sk-card" data-pct="82"><div class="sk-name">CI/CD Automation</div><div class="sk-bar-bg"><div class="sk-bar"></div></div><div class="sk-lvl" data-i18n="lvl_advanced">Advanced</div></div>
+    </div></div>
+  </section>
+
+  <section id="projects" class="section container reveal">
+    <h2 class="section-title" data-i18n="proj_title">Featured Projects</h2>
+    <div class="proj-list">
+      <div class="proj-card">
+        <div class="proj-client" data-i18n="proj1_client">Client: CARIAD SE – Volkswagen Group | July 2025 – Present</div>
+        <div class="proj-title" data-i18n="proj1_title">CI/CD Automation – IVI</div>
+        <p class="proj-desc" data-i18n="proj1_desc">Built and executed automated IVI test suites using GitHub Actions on the Goldfish Emulator. Developed CI workflows using an ENNA-based Python automation framework for infotainment functional and system-level testing. Integrated automated test reporting with RADAR dashboards via Looker Studio for real-time test visibility.</p>
+        <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">ENNA</span><span class="proj-tag">Goldfish/Cuttlefish</span><span class="proj-tag">Looker Studio</span><span class="proj-tag">GCP</span><span class="proj-tag">Firestore</span><span class="proj-tag">GitHub Actions</span></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-client" data-i18n="proj2_client">Client: Stellantis International | May 2022 – June 2025</div>
+        <div class="proj-title" data-i18n="proj2_title">R2PX – Vehicle Software Integration (Instrument Cluster)</div>
+        <p class="proj-desc" data-i18n="proj2_desc">Validated alerts and system information on Instrument Clusters for Stellantis vehicles. Analysed requirement documents to design traceable test cases and executed tests using IBM RQM and ECU Test Tool. Designed and executed 500+ test cases and reported 50+ critical defects through structured defect lifecycle management.</p>
+        <div class="proj-tags"><span class="proj-tag">ECU Test Tool</span><span class="proj-tag">IBM DOORS</span><span class="proj-tag">JFrog</span><span class="proj-tag">ADB</span><span class="proj-tag">Confluence</span><span class="proj-tag">CAN</span><span class="proj-tag">Automotive Ethernet</span><span class="proj-tag">UDS</span></div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-client" data-i18n="proj3_client">Client: KPIT Technologies Ltd | Nov 2021 – Apr 2022</div>
+        <div class="proj-title" data-i18n="proj3_title">MW Development Project</div>
+        <p class="proj-desc" data-i18n="proj3_desc">Orchestrated configuration and optimisation of IPCOM and IPCABS modules ensuring seamless integration with design specifications. Managed end-to-end build processes while enforcing MISRA compliance through rigorous static analysis. Validated system integrity via Unit and Component testing (SIL) and maintained 100% requirements traceability across the V-cycle.</p>
+        <div class="proj-tags"><span class="proj-tag">AUTOSAR Classic</span><span class="proj-tag">MISRA</span><span class="proj-tag">SIL</span><span class="proj-tag">Static Analysis</span><span class="proj-tag">V-Cycle</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements" class="section container reveal">
+    <h2 class="section-title" data-i18n="ach_title">Achievements &amp; Awards</h2>
+    <div class="ach-grid">
+      <div class="ach-card"><span class="ach-icon">🏆</span><div class="ach-title" data-i18n="ach1_title">100% Requirements Traceability</div><div class="ach-org" data-i18n="ach1_org">MW Development — KPIT Technologies</div></div>
+      <div class="ach-card"><span class="ach-icon">🎯</span><div class="ach-title" data-i18n="ach2_title">500+ Test Cases Authored</div><div class="ach-org" data-i18n="ach2_org">R2PX Project — Stellantis International</div></div>
+      <div class="ach-card"><span class="ach-icon">🔍</span><div class="ach-title" data-i18n="ach3_title">50+ Critical Defects Reported</div><div class="ach-org" data-i18n="ach3_org">R2PX Project — Stellantis International</div></div>
+      <div class="ach-card"><span class="ach-icon">⚡</span><div class="ach-title" data-i18n="ach4_title">CI/CD Pipeline Implementation</div><div class="ach-org" data-i18n="ach4_org">IVI Automation — CARIAD SE / VW Group</div></div>
+    </div>
+  </section>
+
+    <h2 class="section-title section-title--gap" data-i18n="lang_title">Languages</h2>
+    <div class="lang-row">
+      <div class="lang-card"><div class="lang-name" data-i18n="lang1_name">English</div><div class="lang-lvl" data-i18n="lang1_lvl">Professional Proficiency</div></div>
+      <div class="lang-card"><div class="lang-name" data-i18n="lang2_name">Telugu</div><div class="lang-lvl" data-i18n="lang2_lvl">Native</div></div>
+      <div class="lang-card"><div class="lang-name" data-i18n="lang3_name">kannada</div><div class="lang-lvl" data-i18n="lang3_lvl">Conversational</div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section container reveal">
+    <h2 class="section-title" data-i18n="contact_title">Get In Touch</h2>
+    <!-- <div class="contact-note">
+      <i class="fas fa-info-circle"></i>
+      <span data-i18n="contact_note">Submitting this form opens your email client pre-filled and sends the message directly to <strong>udayagiripavankumar222@gmail.com</strong>. You will receive it in your Gmail inbox just like a normal email.</span>
+    </div> -->
+    <div class="contact-grid">
+      <div class="contact-info-block">
+        <h3 class="ci-hdr" data-i18n="contact_connect">Let's Connect</h3>
+        <p class="ci-tagline" data-i18n="contact_tagline">I'm ready to discuss automotive V&amp;V opportunities, ECU validation collaboration, or share insights about test automation and embedded systems.</p>
+        <div class="ci-items">
+          <div class="ci-item"><div class="ci-ico"><i class="fas fa-envelope"></i></div><div><div class="ci-lbl" data-i18n="lbl_email">Email</div><div class="ci-val"><a href="mailto:udayagiripavankumar222@gmail.com">udayagiripavankumar222@gmail.com</a></div></div></div>
+          <div class="ci-item"><div class="ci-ico"><i class="fab fa-linkedin"></i></div><div><div class="ci-lbl">LinkedIn</div><div class="ci-val"><a href="https://www.linkedin.com/in/pavankumar-u/" target="_blank">linkedin.com/in/pavankumar-u</a></div></div></div>
+          <div class="ci-item">
+            <div class="ci-ico"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="ci-lbl" data-i18n="lbl_phone">Phone</div>
+              <div class="ci-val">
+                <span id="phone-text" data-i18n="phone_hidden">Click to Reveal Contact Number</span><br>
+                <button class="reveal-btn" id="revealBtn" data-i18n="phone_reveal">Reveal</button>
+              </div>
             </div>
-        </ul>
-    </nav>
+          </div>
+          <div class="ci-item"><div class="ci-ico"><i class="fas fa-map-marker-alt"></i></div><div><div class="ci-lbl" data-i18n="lbl_location">Location</div><div class="ci-val" data-i18n="location_val">Bengaluru, India</div></div></div>
+        </div>
+      </div>
+      <div class="cf-wrap">
+        <h3 data-i18n="form_title">Send a Message</h3>
+        <p class="cf-sub" data-i18n="form_sub">Ready to collaborate? Drop me a line and let's discuss your next project.</p>
+        <form id="contactForm" class="cf-fields" novalidate>
+          <input type="text"  id="cf-name"    data-i18n-ph="ph_name"    placeholder="Your Name"    required />
+          <input type="email" id="cf-email"   data-i18n-ph="ph_email"   placeholder="Your Email"   required />
+          <textarea           id="cf-message" data-i18n-ph="ph_message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn-send"><i class="fas fa-paper-plane"></i> <span data-i18n="btn_send">Send Message</span></button>
+          <div id="cf-status" class="cf-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section id="home" class="hero container">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <p class="accent-label">Hello, I'm</p>
-                    <h1 class="glitch-name">PAVAN<br>KUMAR U</h1>
-                    <h3>Automotive Verification & Validation Engineer</h3>
-                    <p class="hero-desc">
-                        Seeking to contribute technical leadership in ECU validation and test automation to a dynamic team focused on next-generation automotive technologies
-                    </p>
-                    <div class="cta-row">
-                        <a href="Pavan_Validation.pdf" class="btn-main" target="_blank">DOWNLOAD RESUME</a>
-                        <a href="#contact" class="btn-outline">CONTACT ME</a>
-                    </div>
-                </div>
+  <!-- VISITOR COUNTER — end of profile -->
+  <section class="section container reveal">
+    <div class="vc-wrap">
+      <div class="vc-hdr"><i class="fas fa-chart-line"></i> <span data-i18n="vc_title">Visitor Counter</span></div>
+      <div class="vc-grid">
+        <div class="vc-box"><div class="vc-num" data-target="6554">0</div><div class="vc-lbl" data-i18n="vc_total">Total Views</div></div>
+        <div class="vc-box"><div class="vc-num" data-target="1060">0</div><div class="vc-lbl" data-i18n="vc_unique">Unique Visitors</div></div>
+        <div class="vc-box"><div class="vc-num" data-target="926">0</div><div class="vc-lbl" data-i18n="vc_return">Return Visits</div></div>
+      </div>
+      <div class="vc-foot"><i class="fas fa-sync-alt"></i><span id="vc-time">—</span></div>
+    </div>
+  </section>
+</main>
 
-                <div class="hero-visual">
-                    <div class="tech-circle">
-                        <div class="inner-scanner">
-                            <img src="IMG_20251210_135124_056.webp" alt="Pavan" class="profile-img">
-                            <div class="scan-line"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<footer class="footer">
+  <span data-i18n="footer_copy">© 2025</span> <span class="footer-name">Pavan Kumar U</span>. <span data-i18n="footer_rights">All rights reserved.</span>
+</footer>
 
-        <section id="about" class="section container reveal">
-            <div class="glass-card">
-                <h2 class="section-header">About Me</h2>
-                <p>
-                    Connected Vehicle Engineer with 4+ years of experience in automotive ECU validation, specializing in
-                    Infotainment and Instrument Cluster systems. Proven expertise in SIL (Software-in-the-Loop)
-                    and HIL (Hardware-in-the-Loop) testing to ensure robust requirements-based verification.
-                    Expert in developing automated test suites using Python and ECU-TEST, integrated with
-                    GitHub Actions and CI/CD pipelines to accelerate defect detection and software reliability.
-                </p>
-            </div>
-        </section>
-
-        <section id="education" class="section container reveal">
-            <div class="glass-card">
-                <h2 class="section-header">Education</h2>
-                <h3>Electronics and Communication Engineering (B.Tech)</h3>
-                <p style="color: var(--secondary); margin-bottom: 10px;">
-                    Newton's Institute Of Engineering, JNTU-Kakinada | CGPA: 7.04 <br>
-                    Completed 2020
-                </p>
-                <p>
-                    An advanced program combining deep theoretical insight with practical expertise in hardware development and electronic systems.
-                </p>
-            </div>
-        </section>
-
-        <section id="skills" class="section container reveal">
-            <h2 class="section-header">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-tag">SIL / HIL Testing</div>
-                <div class="skill-tag">CI/CD Automation</div>
-                <div class="skill-tag">Python Automation</div>
-                <div class="skill-tag">CAN / UDS</div>
-                <div class="skill-tag">ECU Test Tool</div>
-                <div class="skill-tag">Vector / dSpace</div>
-                <div class="skill-tag">Git/GitHub Actions</div>
-                <div class="skill-tag">Goldfish/Cuttlefish Emulator</div>
-                <div class="skill-tag">Virtualization</div>
-                <div class="skill-tag">GCP/AWS</div>
-                <div class="skill-tag">IBM Doors/CodeBeamer</div>
-                <div class="skill-tag">Autosar Classic</div>
-                <div class="skill-tag">Embedded Systems</div>
-                <div class="skill-tag">Swagger/Jfrog</div>
-                <div class="skill-tag">Confluence/JIRA</div>
-            </div>
-        </section>
-
-        <section id="experience" class="section container reveal">
-            <h2 class="section-header">Experience</h2>
-            <div class="glass-card">
-                <h3 style="color: var(--primary);">KPIT Technologies — Verification & Validation Engineer</h3>
-                <p style="color: var(--secondary); margin-bottom: 10px;">Nov 2021 – Present | Bengaluru</p>
-                <ul class="exp-list">
-                    <li>SIL/HIL validation for Instrument Cluster & IVI ECUs</li>
-                    <li>CI-based automated execution using GitHub Actions</li>
-                    <li>Python automation using ENNA framework</li>
-                    <li>Goldfish Emulator-based SIL testing</li>
-                    <li>CAN / UDS ECU communication validation</li>
-                    <li>RADAR result publishing & reporting</li>
-                    <li>Regression, Smoke, Sanity, Nightly builds</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="projects" class="section container reveal">
-            <h2 class="section-header">Projects</h2>
-            <div class="project-column">
-                <div class="glass-card project-box">
-                    <span class="client-tag">CLIENT: CARIAD SE VOLKSWAGEN GROUP | JULY 2025 - PRESENT</span>
-                    <h3>CI/CD Automation IVI</h3>
-                    <p>
-                        Built and executed automated IVI test suites using GitHub Actions on the Goldfish Emulator. Developed CI workflows using an ENNA-based Python automation framework for infotainment functional and system-level testing. Integrated automated test reporting with RADAR dashboards.
-                    </p>
-                    <p class="tech-stack">PYTHON, ENNA, GOLDFISH/CUTTLEFISH, LOOKER STUDIO, GCP, FIRESTORE, GITHUB ACTIONS</p>
-                </div>
-
-                <div class="glass-card project-box">
-                    <span class="client-tag">CLIENT: STELLANTIS INTERNATIONAL | MAY 2022 - JUNE 2025</span>
-                    <h3>R2PX – Vehicle Software Integration (Instrument Cluster)</h3>
-                    <p>
-                        Validated alerts and system information on Instrument Clusters. Analyzed requirement documents to design traceable test cases, implemented and executed tests using IBM RQM and ECU Test Tool. Designed and executed 500+ test cases and reported 50+ critical defects.
-                    </p>
-                    <p class="tech-stack">ECU TEST TOOL, IBM DOORS, Jfrog, ADB, CONFLUENCE, CAN, AUTOMOTIVE ETHERNET, UDS</p>
-                </div>
-
-                <div class="glass-card project-box">
-                    <span class="client-tag">CLIENT: KPIT TECHNOLOGIES LTD | NOV 2021 - APR 2022</span>
-                    <h3>MW Development Project</h3>
-                    <p>
-                        Orchestrated the configuration and optimization of IPCOM and IPCABS modules, ensuring seamless integration with design specifications. Managed the end-to-end build process and code compilation while enforcing MISRA compliance and safety standards through rigorous static analysis. Validated system integrity via Unit and Component testing (SIL) and verified code generation tool outputs. By implementing reusable test scripts and maintaining 100% requirements traceability across the V-cycle, I significantly improved validation efficiency and overall system functionality.
-                    </p>
-                    <p class="tech-stack">AUTOSAR CLASSIC</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section container reveal">
-            <h2 class="section-header">Get In Touch</h2>
-            <div class="glass-card contact-wrapper">
-                <div class="contact-grid-two-column">
-                    <!-- Left Side: Contact Info -->
-                    <div class="contact-info">
-                        <h3 class="sub-header">Let's Connect</h3>
-                        <ul class="contact-list">
-                            <li><i class="fas fa-envelope"></i> <a href="mailto:udayagiripavankumar222@gmail.com">udayagiripavankumar222@gmail.com</a></li>
-                            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/pavankumar-u/" target="_blank">linkedin.com/in/pavankumar-u</a></li>
-                            <li><i class="fas fa-phone"></i> +91-7095980656</li>
-                            <li><i class="fas fa-map-marker-alt"></i> Bengaluru, India</li>
-                        </ul>
-                    </div>
-
-                    <!-- Right Side: Message Form -->
-                    <div class="contact-form">
-                        <h2 class="section-header small">Send a Message</h2>
-                        <p class="contact-sub">Ready to collaborate? Let’s turn ideas into reality. Drop me a message and we’ll make your next project happen.</p>
-                        <form id="contactForm" class="styled-form" novalidate>
-                            <input type="text" id="cf-name" name="name" placeholder="Your Name" required>
-                            <input type="email" id="cf-email" name="email" placeholder="Your Email" required>
-                            <textarea id="cf-message" name="message" rows="6" placeholder="Your Message" required></textarea>
-
-                            <button type="submit" class="btn-send">
-                                <i class="fas fa-paper-plane"></i>
-                                <span>Send Message</span>
-                            </button>
-
-                            <div id="cf-status" class="cf-status" role="status" aria-live="polite"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- ...existing code... -->
-        <!-- add this block where you want the visitor counter (e.g. after #projects) -->
-        <section id="visitor-counter" class="section container reveal">
-            <div class="visitor-card">
-                <div class="vc-header"><i class="fas fa-chart-line"></i> VISITOR COUNTER</div>
-
-                <div class="vc-grid">
-                    <div class="vc-item">
-                        <div class="vc-value" data-target="6554">0</div>
-                        <div class="vc-label">TOTAL VIEWS</div>
-                    </div>
-
-                    <div class="vc-item">
-                        <div class="vc-value" data-target="1060">0</div>
-                        <div class="vc-label">UNIQUE VISITORS</div>
-                    </div>
-
-                    <div class="vc-item">
-                        <div class="vc-value" data-target="926">0</div>
-                        <div class="vc-label">RETURN VISITS</div>
-                    </div>
-                </div>
-
-                <div class="vc-updated">
-                    <i class="fas fa-sync-alt"></i>
-                    <span id="vc-last-updated">—</span>
-                </div>
-            </div>
-        </section>
-<!-- ...existing code... -->
-
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
